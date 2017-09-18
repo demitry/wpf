@@ -8,11 +8,24 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <esri:MapView x:Name="MyMapView" Margin="0,0,257,0">
+        <esri:MapView x:Name="MyMapView" Margin="10,10,257,10">
             <esri:Map x:Name="MyMap">
                 <esri:ArcGISTiledLayer Id="BaseMap" 
             Source="http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"/>
             </esri:Map>
         </esri:MapView>
+
+        <ListBox HorizontalAlignment="Left" Height="160" Margin="265,10,0,0" VerticalAlignment="Top" Width="242"
+            Grid.Column="0" ItemsSource="{Binding Routes}"
+            SelectedItem="{Binding SelectedRoute}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="5">
+                        <TextBlock FontSize="18" Text="{Binding Path=Title}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
     </Grid>
 </Window>
