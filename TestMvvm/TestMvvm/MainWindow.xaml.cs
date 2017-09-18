@@ -17,6 +17,9 @@ namespace TestMvvm
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
+    /// ArcGIS Runtime, 
+    /// see ArcGis migration info: 
+    /// https://developers.arcgis.com/net/latest/uwp/guide/migrate-to-100-x.htm
     /// </summary>
     public partial class MainWindow : Window
     {
