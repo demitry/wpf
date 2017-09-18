@@ -10,7 +10,7 @@ namespace TestMvvm
 
         public ObservableCollection<Route> Routes { get; set; }
 
-        public Route SelectedPhone
+        public Route SelectedRoute
         {
             get { return selectedRoute; }
             set
