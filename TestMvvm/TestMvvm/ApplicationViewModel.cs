@@ -10,6 +10,23 @@ namespace TestMvvm
 
         public ObservableCollection<Route> Routes { get; set; }
 
+        private RelayCommand addCommand;
+
+        public RelayCommand AddCommand
+        {
+            get
+            {
+                return addCommand ??
+                    (addCommand = new RelayCommand(obj =>
+                    {
+                        string strTemporaryName = "Route " + (Routes.Count + 1).ToString();
+                        Route route = new Route(strTemporaryName);
+                        Routes.Insert(0, route);
+                        SelectedRoute = route;
+                    }));
+            }
+        }
+
         public Route SelectedRoute
         {
             get { return selectedRoute; }

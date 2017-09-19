@@ -10,6 +10,15 @@ namespace TestMvvm
         private string start;
         private string finish;
 
+        public Route()
+        {
+        }
+
+        public Route(string title)
+        {
+            Title = title;
+        }
+
         public string Title
         {
             get { return title; }

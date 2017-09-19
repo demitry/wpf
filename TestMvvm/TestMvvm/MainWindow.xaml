@@ -26,6 +26,8 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+        <Button Command="{Binding AddCommand}" 
+            Content="Add Route" HorizontalAlignment="Left" Margin="265,175,0,0" VerticalAlignment="Top" Width="89" Height="26"/>
 
     </Grid>
 </Window>
